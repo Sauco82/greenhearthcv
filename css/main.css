@@ -10,18 +10,26 @@ textarea {
     color: #222;
 }
 
+html {
+    font-size: 67.5%;
+}
+
 body {
-    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
     line-height: 1.4;
+    background: #f2f2f2;
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #ec4835;
+    color:white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #ec4835;
+    color:white;
     text-shadow: none;
 }
 
@@ -30,27 +38,71 @@ img {
     vertical-align: middle;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-h1 {
-    font-family: 'Ubuntu', sans-serif;
-    font-family: 'Lobster', cursive;
+h1, h2, h3 {
+    text-align: center;
 }
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+}
+
+a {
+    color: #89a02c;
+}
+
+a:visited{
+    color: #b1cc46;
+}
+
+a:hover {
+    color: #7c9128;
+}
+
+a:active {
+    color: #ec4835;
+}
+
+
+
 
 .container {
     width: 1020px;
     margin: 50px auto;
 }
+/*============Section===============*/
+.section {
+    margin: 80px 0;
+}
 
+/*============Intro===============*/
 
+.intro__avatar {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+}
 
+.intro__header {
+    margin: 0;
+}
 
+.intro__header-highlight {
+    color: #89a02c;
+    font-weight: normal;
+}
 
+.intro__subheader {
+    margin-top: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
 
+/*============Cover-letter===============*/
 
-
+.cover-letter__content {
+    max-width: 760px;
+    margin: 0 auto;
+}
 
 /* ==========================================================================
    Media Queries
