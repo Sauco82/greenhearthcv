@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #333;
 }
 
 html {
@@ -44,6 +44,13 @@ h1, h2, h3 {
 
 h1, h2 {
     font-family: 'Lobster', cursive;
+    font-weight: normal;
+}
+
+
+h1 strong,
+h2 strong {
+    color: #89a02c;
     font-weight: normal;
 }
 
@@ -87,11 +94,6 @@ a:active {
     margin: 0;
 }
 
-.intro__header-highlight {
-    color: #89a02c;
-    font-weight: normal;
-}
-
 .intro__subheader {
     margin-top: 0;
     font-family: 'Ubuntu', sans-serif;
@@ -100,8 +102,87 @@ a:active {
 /*============Cover-letter===============*/
 
 .cover-letter__content {
-    max-width: 760px;
+    width: 760px;
     margin: 0 auto;
+}
+
+/*============    CV      ===============*/
+
+.skills {
+    overflow: hidden;
+}
+
+.skill {
+    float: left;
+    width: 48%;
+    margin: 2em 1%;
+    font-size: 1.4rem;
+}
+
+.skill h3,
+.skill h4 {
+    text-align: left;
+}
+
+.skill h3 {
+    margin-top: 0;
+}
+
+.skill h4 { 
+    margin: 0;
+}
+
+.skill__image {    
+    color: #333;
+    font-size: 2rem;    
+}
+
+.skill__keywords {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.skill__keywords li {
+    float: left;
+    padding: 0 5px 0 0;
+}
+
+/*============    Experience      ===============*/
+.experience {
+    overflow: hidden;
+    margin-bottom: 4rem;
+    font-size: 1.3rem;
+}
+
+.experience__title {
+    float: left;
+    width: 30%;
+}
+
+.experience__header {
+    text-align: left;
+    margin:0;
+    font-size: 1.3rem;    
+    line-height: 100%;
+}
+
+.experience__dates {
+    font-style: italic;
+}
+
+.experience__tasks {
+    /*list-style: none;*/
+    padding: 0;
+    margin: 0 0 0 30%;
+}
+
+.experience__tasks li {
+    float: left;
+    margin-left: 5%;
+    width: 45%;
+    margin-bottom: 0.5rem;
 }
 
 /* ==========================================================================
