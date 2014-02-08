@@ -133,3 +133,89 @@
 	margin: 0;
 }
 
+/*===============================*/
+/* 			Development balls  		*/
+/*===============================*/
+
+.ball {
+	width: 30px;
+	height: 30px;
+	background: red;
+	background: 1px solid white;
+	color: white;	
+
+	position: absolute;
+	
+
+	transition: all 2s;
+	
+	animation-duration: 1s;
+	animation-name: bounce;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: bounce;
+	-webkit-animation-timing-function: ease-in-out;
+	-moz-animation-duration: 1s;
+	-moz-animation-name: bounce;
+	-moz-animation-timing-function: ease-in-out;
+
+}
+
+@keyframes bounce {
+	25% {  	
+		margin-top: 15px;
+	}
+
+	75% {
+		margin-top: -25px;
+	}
+
+	100% {  	
+		margin-top: 0;
+	}
+}
+
+@-moz-keyframes bounce {
+	25% {  	
+		margin-top: 15px;
+	}
+
+	75% {
+		margin-top: -25px;
+	}
+
+	100% {  	
+		margin-top: 0;
+	}
+}
+
+@-webkit-keyframes bounce {
+	25% {  	
+		margin-top: 15px;
+	}
+
+	75% {
+		margin-top: -25px;
+	}
+
+	100% {  	
+		margin-top: 0;
+	}
+}
+  
+
+.ball--design {
+	background: #ffa500;
+}
+
+.ball--development {
+	background: #00bfff;
+}
+
+.ball--bugs {
+	background: #ff6a00;
+}
+
+.ball--research {
+	background: #006aff;
+}
