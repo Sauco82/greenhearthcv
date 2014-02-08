@@ -1,0 +1,97 @@
+#gamedev{
+	background:url(../img/office.jpg);
+	width: 1020px;
+	height: 551px;
+	position: relative;
+}
+
+#pc1,
+#pc2,
+.character,
+#popup {
+	position: absolute;
+}
+
+#char1 {
+	top: 331px;
+	left: 335px;
+}
+
+#char2 {
+	top: 393px;
+	left: 225px;
+}
+
+#pc1 {
+	top: 310px;
+	left: 297px;
+}
+
+#pc2 {
+	top: 379px;
+	left: 189px;
+}
+
+#lead {
+	top: 347px;
+	left: 643px;
+}
+
+/*===============================*/
+/* 			Popup 				*/
+/*===============================*/
+
+#popup {
+	top:40px;
+	left: 50%;
+	width: 400px;
+	padding: 20px;
+	margin-left: -210px;
+	background: #fff9ef;
+	border: 3px solid #fedf84;
+	display: none;
+}
+
+
+.popup__content {
+	font-size: 14px;
+}
+
+.popup__button {
+	display: block;
+	margin: 20px auto 1px auto;
+	padding: 5px 30px;
+	background: -moz-linear-gradient(top, #f49f10 0%, #d78647 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #f49f10 0%,#d78647 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, #f49f10 0%,#d78647 100%); /* W3C */
+	border: 2px solid #d78647;
+	color: white;
+	font-weight: bold;
+}
+
+.popup__button:hover {
+	border-color: #f49f10; 
+	background: -moz-linear-gradient(top, #f49f10 0%, #f49f10 70%, #d78647 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #f49f10 0%, #f49f10 70%,#d78647 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, #f49f10 0%, #f49f10 70%,#d78647 100%); /* W3C */	
+}
+
+.popup__button:active {
+	margin-top: 21px;
+	margin-bottom: 0;
+}
+
+
+/*===============================*/
+/* 			Popup 				*/
+/*===============================*/
+
+.character {
+	cursor: pointer;
+	background: url(../img/charshadow.png) 0px 0px no-repeat;
+	padding: 10px;
+}
+
+.character:hover {
+	background: url(../img/charshadow.png);
+}
