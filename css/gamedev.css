@@ -41,15 +41,35 @@
 /* 			Popup 				*/
 /*===============================*/
 
-#popup {
-	top:40px;
-	left: 50%;
+#popup {	
+	bottom: 200px;
+	right: 50%;
 	width: 400px;
 	padding: 20px;
-	margin-left: -210px;
+	margin-right: -210px;
 	background: #fff9ef;
-	border: 3px solid #fedf84;
-	display: none;
+	border: 3px solid #fedf84;	
+	z-index: 10;
+	transition: all 0.3s;
+}
+
+#popup.to-notifications {	
+	bottom: 0;
+	right: 0;
+	margin-right: 0;
+	opacity: 0;
+	transform: scale(0.3);
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+}
+
+#black-screen {
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;	
+	background: rgba(0,0,0,0.3);
 }
 
 
@@ -58,6 +78,7 @@
 }
 
 .popup__button {
+	font-size: 16px;
 	display: block;
 	margin: 20px auto 1px auto;
 	padding: 5px 30px;
@@ -140,18 +161,20 @@
 .ball {
 	width: 30px;
 	height: 30px;
-	background: red;
-	background: 1px solid white;
+	line-height: 30px;
+	border-radius: 100%;
+	border: 1px solid white;
+	text-align: center;
+	font-weight: bold;
 	color: white;	
-
 	position: absolute;
 	
-
-	transition: all 2s;
+	transition: top 0.5s, left 0.5s;
 	
 	animation-duration: 1s;
 	animation-name: bounce;
 	animation-timing-function: ease-in-out;
+
 	-webkit-animation-duration: 1s;
 	-webkit-animation-name: bounce;
 	-webkit-animation-timing-function: ease-in-out;
@@ -203,19 +226,154 @@
 	}
 }
   
-
 .ball--design {
-	background: #ffa500;
+	background: #00bfff;
+	border-color: #00a8e0;
 }
 
 .ball--development {
-	background: #00bfff;
+	background: #ff6a00;
+	border-color: #e05d00;
 }
 
 .ball--bugs {
-	background: #ff6a00;
+	background: #ffa500;
+	border-color: #e19200;
 }
 
 .ball--research {
 	background: #006aff;
+	border-color: #005de0;
+}
+
+/*===============================*/
+/* 			Progress 	  		*/
+/*===============================*/
+
+.progress {
+	width: 500px;
+	height: 150px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.progress__ball {
+	width: 75px;
+	height: 75px;
+	line-height: 75px;
+	border: 3px solid black;
+	border-radius: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: white;	
+	position: absolute;
+	font-size: 25px;
+
+	transition: all 0.3s;
+}
+
+.progress__bugs {
+	background: #ffa500;
+	border-color: #e19200;
+	top: 5px;
+	left:0;
+}
+
+.progress__design {
+	background: #00bfff;
+	border-color: #00a8e0;
+	top: 50px;
+	left:50px;
+	z-index: 5;
+}
+
+.progress__development {
+	background: #ff6a00;
+	border-color: #e05d00;
+	top: 50px;
+	right:50px;
+}
+
+.progress__research {
+	background: #006aff;
+	border-color: #005de0;
+	top: 5px;
+	right:0;
+}
+
+.progress__game {
+	position: absolute;
+	width: 300px;
+	top: 10px;
+	left:50%;
+	margin-left: -150px;
+	background: rgba(255,255,255,0.7);
+	border: 2px solid rgba(200,200,200,0.7);
+}
+
+.progress__game h3 {
+	margin-bottom: 0;
+}
+
+.progress__game p {
+	margin-top: 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+/*========================================*/
+/*			Highlight 					*/
+/*========================================*/
+.highlight {
+	width: 78px;
+	height: 78px;	
+	z-index: 0;
+	border-radius: 100%;		
+	position: absolute;		
+
+	animation-duration: 0.3s;
+	animation-name: explode;
+	animation-timing-function: ease-in-out;
+
+	-webkit-animation-duration: 0.3s;
+	-webkit-animation-name: explode;
+	-webkit-animation-timing-function: ease-in-out;
+
+	-moz-animation-duration: 0.3s;
+	-moz-animation-name: explode;
+	-moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes explode {
+	from { box-shadow: 0 0 30px;}
+	50% { box-shadow: 0 0 50px;}
+	to { box-shadow: 0 0 0px;}
+}
+
+@-moz-keyframes explode {
+	from { box-shadow: 0 0 30px;}
+	50% { box-shadow: 0 0 50px;}
+	to { box-shadow: 0 0 0px;}
+}
+
+@keyframes explode {
+	from { box-shadow: 0 0 30px;}
+	50% { box-shadow: 0 0 50px;}
+	to { box-shadow: 0 0 0px;}
+}
+
+.highlight__bugs {
+	color: #ffa500;
+}
+
+.highlight__design {
+	color: #00a8e0;
+}
+
+.highlight__development {	
+	color: #e05d00;
+}
+
+.highlight__research {	
+	color: #005de0;
 }

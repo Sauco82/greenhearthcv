@@ -209,6 +209,17 @@
                 <p> The job offer finally triggered my decision to buy the game, and now I would like to show some interface suggestions. Please play with it!</p>
 
                 <div id="gamedev">
+                    <div class="progress">
+                        <div class="progress__ball progress__bugs" id="bugs">0</div>
+                        <div class="progress__ball progress__design" id="design">0</div>
+                        <div class="progress__game">
+                            <h3>Little big CV</h3>
+                            <p>Post-Apocaliptic / Action-Simulation</p>
+                        </div>
+                        <div class="progress__ball progress__development" id="development">0</div>
+                        <div class="progress__ball progress__research" id="research">0</div>
+                    </div>
+
                     <img id="pc1" src="img/pc1.png" >
                     <img id="pc2" src="img/pc1.png" >
 
@@ -216,6 +227,8 @@
                     <img id="char2" class="character" src="img/char2.png" >
                     <img id="lead" class="character" src="img/lead.png" >
 
+
+                    <div id="black-screen"></div>
                     <div id="popup">
                         <span class="popup__close"></span>
                         <div class="popup__content">
@@ -223,32 +236,12 @@
                             <p>I tought that making an analysis of the things I found missing in the game would be reaaally boring.</p>
                             <p>So instead I just decided to prototype them up.</p>
                         </div>
-                        <button class="popup__button">Show 'em to me!</button>
+                        <button class="popup__button" onclick="startGame()">Show 'em to me!</button>
                     </div>
-                    <ul id="notifications">
-                        <li class="notification">
-                            <h3>Some Proposals</h3>
-                            <p>I tought that making an analysis of the things I found missing in the game would be reaaally boring.</p>
-                            <p>So instead I just decided to prototype them up.</p>
-                        </li>
-                        <li class="notification">
-                            <h3>Some Proposals</h3>
-                            <p>I tought that making an analysis of the things I found missing in the game would be reaaally boring.</p>
-                            <p>So instead I just decided to prototype them up.</p>
-                        </li>
-                        <li class="notification">
-                            <h3>Some Proposals</h3>
-                            <p>I tought that making an analysis of the things I found missing in the game would be reaaally boring.</p>
-                            <p>So instead I just decided to prototype them up.</p>
-                        </li>
-                        <li class="notification">
-                            <h3>Some Proposals</h3>
-                            <p>I tought that making an analysis of the things I found missing in the game would be reaaally boring.</p>
-                            <p>So instead I just decided to prototype them up.</p>
-                        </li>
+                    <ul id="notifications">                        
                     </ul>
                 </div>
-                <p>Disclaimer: the code doesn't is not precisely the most brilliant and maintainable piece I've ever written, being so time constrined I've focused on prototyping above everything.</p>
+                <p>Disclaimer: the code is not precisely the most brilliant and maintainable piece I've ever written, being so time constrained I've focused on prototyping over everything.</p>
 
                 <h3>I'm in contact with several graphic designers</h3>
                 <p>I have a handful of friends and familiars who are profesional artists and/or graphic designers, I'm even trainig some of them so they know how to get into the world of game development. </p>
@@ -258,10 +251,12 @@
                 <h2>Education</h2>
                 <p><strong>University of Jaén</strong>. Computer Engineer. Finished at  2006</p>
                 <p>I keep on continuously reading books and articles in order to keep myself up to date and get more skills. Some of them as a sample:</p>
-                <p><strong>Javascript</strong>: Javascript: The Good Parts, Javascript Patterns, Maintainable Javascript, Jquery from Novice to Ninja, AngularJS … </p>
-                <p><strong>Interaction/Gaming</strong>: HTML5 Canvas, Canvas the Pocket Guide, HTML5 Games, HTML5 Animation with Javascript...</p>
-                <p><strong>Design/UX</strong>: The Smashing Book (1/3), The Mobile Book, Numbers in Graphic Design, History of Typography, Don't Make me Think, Inkscape Logo a Logo...</p>
-                <p><strong>Ruby/Rails</strong>: Agile Web Development with Rails (1 to 3), Poignant Guide to Ruby, Programming Ruby 1.8, 1.9...</p>
+                <ul>
+                    <li><strong>Javascript</strong>: Javascript: The Good Parts, Javascript Patterns, Maintainable Javascript, Jquery from Novice to Ninja, AngularJS… </li>
+                    <li><strong>Interaction/Gaming</strong>: HTML5 Canvas, Canvas the Pocket Guide, HTML5 Games, HTML5 Animation with Javascript…</li>
+                    <li><strong>Design/UX</strong>: The Smashing Book (1/3), The Mobile Book, Numbers in Graphic Design, History of Typography, Don't Make me Think, Inkscape Logo a Logo…</li>
+                    <li><strong>Ruby/Rails</strong>: Agile Web Development with Rails (1 to 3), Poignant Guide to Ruby, Programming Ruby 1.8, 1.9…</li>
+                </ul>
                 <p><strong>Languages:</strong> Fluent English, Native Spanish</p>
 
             </div>
@@ -274,6 +269,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-        <script src="js/main.js"></script>
+        <script src="js/main.js"></script>        
     </body>
 </html>
