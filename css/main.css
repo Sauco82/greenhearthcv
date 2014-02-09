@@ -149,6 +149,10 @@ a:active {
     padding: 0 5px 0 0;
 }
 
+.skills-intro {
+    text-align: center;
+}
+
 /*============    Experience      ===============*/
 .experience {
     overflow: hidden;
@@ -262,6 +266,19 @@ a:active {
     *zoom: 1;
 }
 
+
+/*==============================*/
+/*          Email               */
+/*==============================*/
+
+.email {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 500px;
+}
+
+
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -332,6 +349,7 @@ a:active {
         page-break-after: avoid;
     }
 }
+
 
 /*==============================*/
 /*          Fonts               */
