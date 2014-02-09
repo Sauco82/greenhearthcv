@@ -207,6 +207,16 @@
                 <p>The job offer finally triggered my decision to buy the game, and now I would like to show some interface suggestions. Please play with it!</p>
 
                 <div id="gamedev">
+                    <div class="timecontrol">
+                        <ul class="timecontrol__controls">
+                            <li class="icon-pause" onclick="pause(event)"></li>
+                            <li class="icon-play active" onclick="setSpeed(event,1)"></li>
+                            <li class="icon-forward" onclick="setSpeed(event,5)"></li>
+                            <li class="icon-fast-forward" onclick="setSpeed(event,10)"></li>
+                        </ul>
+                        <p class="timecontrol__date" id="date-placeholder"></p>
+                    </div>
+
                     <div class="progress">
                         <div class="progress__ball progress__bugs" id="bugs">0</div>
                         <div class="progress__ball progress__design" id="design">0</div>
@@ -436,6 +446,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="js/vendor/lightbox-2.6.min.js"></script>
+        <script src="js/vendor/moment.min.js"></script>
         
         <script src="js/main.js"></script>        
     </body>

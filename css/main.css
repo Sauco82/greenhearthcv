@@ -448,3 +448,6 @@ a:active {
 .icon-fast-forward:before {
     content: "\e60c";
 }
+.icon-pause:before {
+    content: "\e60e";
+}

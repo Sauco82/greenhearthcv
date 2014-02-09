@@ -1,28 +1,61 @@
 var gameConfig = {
 	speed: 1,
 	time: 0,
-	pause: false
+	pause: false,
+	date: ""
 };
 
 function gameLoop() {	
 	if (!gameConfig.pause) {
 		addRandomBall();
+		increaseDate()
 	} 
-	setTimeout(gameLoop, 3000);
+	setTimeout(gameLoop, 3000 / gameConfig.speed);
 }
 
-function pause() { 
+// ========================================
+	// Time management
+// ========================================
+
+function pause(event) { 
 	gameConfig.pause = true 
+
+	$(".timecontrol__controls li").removeClass("active");
+	$(event.target).addClass("active");
 }
 
 function cancelPause() { 
 	gameConfig.pause = false 
 }
 
+function setSpeed(event, speed) {
+	gameConfig.speed = speed;
+	cancelPause();
+
+	$(".timecontrol__controls li").removeClass("active");
+	$(event.target).addClass("active");
+}
+
+function initDate() {
+	gameConfig.date = moment().subtract('years', 30);
+
+	showDate();
+}
+
+function increaseDate() {
+	gameConfig.date.add('days',1);
+	showDate();
+}
+
+function showDate() {
+	$("#date-placeholder").html(gameConfig.date.format("YYYY, MMM Do"));
+}
+
 // ========================================
 	// Notifications
 // ========================================
 function startGame() {
+	initDate();
 	popupToNotifications();
 	enableCharacterInteraction();
 	gameLoop();

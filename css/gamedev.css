@@ -522,7 +522,7 @@
 
 #options {
 	position: absolute;
-	top:30px;
+	top:80px;
 	right: 20px;
 	list-style: none;
 	margin: 0;
@@ -562,3 +562,50 @@
 		width: 150px;
 	}
 
+
+/*========================================*/
+/*			Time control   					*/
+/*========================================*/
+
+.timecontrol {
+	position: absolute;
+	top:30px;
+	right: 20px;
+	margin-bottom: 5px;
+	background: #fff1d8;
+	border: 2px solid #ff981b;
+	border-radius: 5px;	
+	padding: 5px;	
+	font-size: 14px;
+	line-height: 18px;
+	width: 200px;
+	overflow: hidden;
+}
+
+.timecontrol__controls {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+}
+
+.timecontrol__controls li {
+	padding: 5px;
+	float: left;
+	cursor: pointer;
+}
+
+.timecontrol__controls li:hover {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.timecontrol__controls li.active {
+	color: #ff981b;;	
+} 
+
+.timecontrol__date {
+	text-align: right;
+	margin: 0;
+	line-height: 24px;
+}
