@@ -4,8 +4,7 @@ var gameConfig = {
 	pause: false
 };
 
-function gameLoop() {
-	console.log("working")
+function gameLoop() {	
 	if (!gameConfig.pause) {
 		addRandomBall();
 	} 
@@ -25,6 +24,7 @@ function cancelPause() {
 // ========================================
 function startGame() {
 	popupToNotifications();
+	enableCharacterInteraction();
 	gameLoop();
 	$("#black-screen").hide();
 }
@@ -35,11 +35,28 @@ function popupToNotifications() {
 
 	notification.html(content);
 	$("#popup").addClass("to-notifications");
-	
+
 	setTimeout(function(){
 		$("#popup").remove();
 	},300)
 }
+
+// ========================================
+	// Character sheets
+// ========================================
+
+function enableCharacterInteraction() {
+	$(".character").click(function(){
+		var charId = "." + $(this).attr("id");
+
+		$(charId).toggle();
+	});
+
+	$(".character-sheet__close").click(function() {
+		$(this).parent().hide();
+	});
+}
+
 
 
 // ========================================
