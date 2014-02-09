@@ -136,7 +136,7 @@ function moveBallToProgress(ball, target) {
 
 	ball.css({
 		top: position.top,
-		left: position.left + parseInt($(".progress").css('margin-left'))
+		left: position.left + 260
 	});	
 
 	setTimeout(function(){
